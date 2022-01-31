@@ -1,6 +1,6 @@
 ############################################################################
 #
-#   Copyright (c) 2015 PX4 Development Team. All rights reserved.
+#   Copyright (c) 2015-2022 PX4 Development Team. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -35,12 +35,14 @@ px4_add_library(mathlib
 	math/test/test.cpp
 	math/filter/LowPassFilter2p.hpp
 	math/filter/MedianFilter.hpp
+	math/filter/MovingAverage.hpp
 	math/filter/NotchFilter.hpp
 )
 
 px4_add_unit_gtest(SRC math/test/LowPassFilter2pVector3fTest.cpp LINKLIBS mathlib)
 px4_add_unit_gtest(SRC math/test/AlphaFilterTest.cpp)
 px4_add_unit_gtest(SRC math/test/MedianFilterTest.cpp)
+px4_add_unit_gtest(SRC math/test/MovingAverageTest.cpp)
 px4_add_unit_gtest(SRC math/test/NotchFilterTest.cpp)
 px4_add_unit_gtest(SRC math/FunctionsTest.cpp)
 px4_add_unit_gtest(SRC math/WelfordMeanTest.cpp)
